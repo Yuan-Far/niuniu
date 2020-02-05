@@ -1,0 +1,77 @@
+@import '~antd/dist/antd.min.css';
+
+html, body {
+  height: 100%;
+}
+
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+input,
+a,
+button {
+  font-family: Roboto, Noto Sans SC，Noto Sans TC，Noto Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  outline: none;
+  border: none;
+  &::placeholder {
+    color: #ddd;
+  }
+}
+
+p {
+  word-wrap: normal;
+  word-break: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* 动画相关样式 */
+.fade-enter, .fade-appear {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active,
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+}
