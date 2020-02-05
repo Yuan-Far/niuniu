@@ -177,3 +177,26 @@ export const ROLEMAP = [
     type: 'diamond'
   }
 ];
+
+export const FILTER_KEYS = ['本周', '上周', '变化', '变化百分比'];
+
+export const KEYS_MAP = {
+  '上周': '9',
+  '本周': '18',
+  '变化': '19',
+  '变化百分比': '20'
+};
+
+export const CLEAN_DATA = [
+  'date',
+  'arriveGoods',
+  'arriveActivity',
+  'goodsUV',
+  'activityUV',
+  'orderTransform',
+  'orderCount',
+  'payTransform',
+  'payOne',
+  'aveGmv',
+  'gmv'
+];

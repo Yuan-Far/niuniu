@@ -2,6 +2,7 @@
  * covert canvas to image
  * and save the image file
  */
+/*eslint-disable */
 
 const Canvas2Image = function () {
 
@@ -264,4 +265,25 @@ const Canvas2Image = function () {
 
 }();
 
-export default Canvas2Image;
+const cleanObj = (obj, keysToKeep = [], childIndicator) => {
+  Object.keys(obj).forEach(key => {
+    if (key === childIndicator) {
+      cleanObj(obj[key], keysToKeep, childIndicator);
+    } else if (!keysToKeep.includes(key)) {
+      delete obj[key];
+    }
+  });
+  return obj;
+};
+
+const mapKeys = (obj, fn) =>
+  Object.keys(obj).reduce((acc, k) => {
+    acc[fn(obj[k], k, obj)] = obj[k];
+    return acc;
+  }, {});
+
+export {
+	Canvas2Image as default,
+	cleanObj,
+	mapKeys
+}

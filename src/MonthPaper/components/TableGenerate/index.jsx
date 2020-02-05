@@ -1,20 +1,14 @@
 import React from 'react';
-// import { Table } from 'antd';
 import { ROLEMAP } from '../../constants/index'
 import './style.scss';
 
 const prefixCls = 'table-generate';
 
 const TableGenerate = ({
-  columns,
   data
 }) => {
-  columns.splice(0, 0, columns[columns.length - 1])
-  columns.pop(-1)
   data.splice(0, 0, data[data.length - 1])
   data.pop(-1)
-
-  console.log('----', data);
   return <div className={prefixCls}>
     <div className={`${prefixCls}-title`}>
       <div>

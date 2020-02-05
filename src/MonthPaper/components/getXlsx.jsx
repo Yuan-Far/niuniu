@@ -3,13 +3,13 @@ import { message, Button, Upload, Icon } from 'antd';
 import { xlsxCgiToData, roleXlsxToData } from '../constants/index';
 import XLSX from 'xlsx'
 
-const findObjKeyByValue = (data, value, compare = (a, b) => a === b) =>
-  Object.keys(data).find(k => compare(data[k], value))
+// const findObjKeyByValue = (data, value, compare = (a, b) => a === b) =>
+//   Object.keys(data).find(k => compare(data[k], value))
 
 const fmFilesData = (data, name) => {
   const newData = []
   const xlsxData = name === 'roles.xlsx' ? roleXlsxToData : xlsxCgiToData;
-  data.map(item => {
+  data.forEach(item => {
     const tempObj = {}
     Object.keys(item).forEach(key => {
       const newKey = xlsxData[key.split('\n')[0].trim()].type || key.split('\n')[0].trim()
