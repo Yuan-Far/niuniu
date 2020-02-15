@@ -54,8 +54,8 @@ const TableGenerate = ({
             className={`${prefixCls}-item`}
             key={index}
           >
-            <div className={`${prefixCls}-current`}>{item.nextKeepPercent}</div>
-            <div className={`${prefixCls}-past`}>{`上周 ${item.nextKeepPercent_1}`}</div>
+            <div className={`${prefixCls}-current`}>{item.nextKeepPercent_1}</div>
+            <div className={`${prefixCls}-past`}>{`上周 ${item.nextKeepPercent}`}</div>
             <div className={`${prefixCls}-rate`}>
               <span data-show={parseInt(item.nextKeepPercentChange, 10) > 0 ? '1' : '0'}>{item.nextKeepPercentChange}</span>
             </div>

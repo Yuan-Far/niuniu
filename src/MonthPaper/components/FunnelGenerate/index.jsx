@@ -18,6 +18,7 @@ const FunnelGenerate = ({
   const currentWeek = dataSource['18'];
   const change = dataSource['19'];
   const changePercent = dataSource['20'];
+  console.log(currentWeek)
   return <div className={prefixCls}>
     {
       dataSource && dataSource['9'] && <React.Fragment><div className={`${prefixCls}-header`}>
@@ -63,17 +64,17 @@ const FunnelGenerate = ({
         </div>
       </div>
       <div className={`${prefixCls}-mid`}>
-        <div className={`${prefixCls}-mid-title`}>{`下单转化 ${currentWeek.orderCount}`}</div>
+        <div className={`${prefixCls}-mid-title`}>{`下单转化 ${currentWeek.orderTransform}`}</div>
           <div>
-            <p>{`上周${pastWeek.orderCount}`}</p>
+            <p>{`上周${pastWeek.orderTransform}`}</p>
             <span
-              data-show={parseInt(change.orderCount, 10) > 0 ? '1' : '0'}
+              data-show={parseInt(change.orderTransform, 10) > 0 ? '1' : '0'}
               className={`${prefixCls}-mid-span`}
-            >{change.orderCount}</span>
+            >{change.orderTransform}</span>
             <span
-              data-show={parseInt(changePercent.orderCount, 10) > 0 ? '1' : '0'}
+              data-show={parseInt(changePercent.orderTransform, 10) > 0 ? '1' : '0'}
               className={`${prefixCls}-mid-span`}
-            >{changePercent.orderCount}</span>
+            >{changePercent.orderTransform}</span>
           </div>
         </div>
       <div className={`${prefixCls}-order`}>
@@ -93,17 +94,17 @@ const FunnelGenerate = ({
         </div>
       </div>
       <div className={`${prefixCls}-mid`}>
-        <div className={`${prefixCls}-mid-title`}>{`支付转化 ${currentWeek.payOne}`}</div>
+        <div className={`${prefixCls}-mid-title`}>{`支付转化 ${currentWeek.payTransform}`}</div>
         <div>
-          <p>{`上周${pastWeek.payOne}`}</p>
+          <p>{`上周${pastWeek.payTransform}`}</p>
           <span
-            data-show={parseInt(change.payOne, 10) > 0 ? '1' : '0'}
+            data-show={parseInt(change.payTransform, 10) > 0 ? '1' : '0'}
             className={`${prefixCls}-mid-span`}
-          >{change.payOne}</span>
+          >{change.payTransform}</span>
           <span
-            data-show={parseInt(changePercent.payOne, 10) > 0 ? '1' : '0'}
+            data-show={parseInt(changePercent.payTransform, 10) > 0 ? '1' : '0'}
             className={`${prefixCls}-mid-span`}
-          >{changePercent.payOne}</span>
+          >{changePercent.payTransform}</span>
         </div>
       </div>
       <div className={`${prefixCls}-pay`}>
